@@ -8,8 +8,8 @@ COPY package*.json ./
 RUN npm install --loglevel=error
 
 COPY . .
-
-RUN REACT_APP_API_URL=http://bia-env.eba-t4spu2id.us-east-1.elasticbeanstalk.com SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
+ 
+RUN REACT_APP_API_URL=http://bia1.us-east-1.elasticbeanstalk.com/bia SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
 
 RUN mv client/build build
 
